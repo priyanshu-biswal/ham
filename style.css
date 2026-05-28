@@ -1,0 +1,290 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body{
+    background-color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navigation bar */
+nav{
+    background-color: #00aaff;
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+/* Logo styling */
+.logo h1{
+    color: white;
+    font-size: 28px;
+}
+
+/* Navbar links */
+nav ul{
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+}
+
+/* Navbar links */
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+/* Hover effect */
+nav ul li a:hover{
+    color: lightgray;
+}
+
+/* User button */
+.user{
+    background-color: white;
+
+    padding: 8px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* User text */
+.user h1{
+    color: #00aaff;
+    font-size: 18px;
+}
+
+/* Hover effect */
+.user:hover{
+    background-color: #dff4ff;
+}
+
+/* Menu icon */
+.menu{
+    display: none;
+
+    color: white;
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+/* Sliding sidebar */
+.dropdown{
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: 70%;
+    height: 100vh;
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sidebar links */
+.dropdown li{
+    list-style: none;
+    margin: 20px 0;
+}
+
+/* Sidebar text */
+.dropdown li a{
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+}
+
+/* Hover effect */
+.dropdown li a:hover{
+    color: #00aaff;
+}
+
+/* Open sidebar on hover */
+.menu:hover .dropdown{
+    right: 0;
+}
+
+/* Hero section */
+.hero{
+    min-height: 90vh;
+
+    padding: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+/* Left side */
+.hero-left{
+    width: 50%;
+}
+
+/* Heading */
+.hero-left h1{
+    font-size: 52px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    color: #222;
+}
+
+
+.hero-left span{
+    color: #00aaff;
+}
+
+/* Paragraph */
+.hero-left p{
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: gray;
+
+    margin-bottom: 30px;
+}
+
+/* Button */
+.hero-left button{
+    background-color: #00aaff;
+    color: white;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.hero-left button:hover{
+    background-color: #008ecc;
+}
+
+/* Focus state */
+.hero-left button:focus{
+    outline: 3px solid black;
+}
+
+/* Click effect */
+.hero-left button:active{
+    transform: scale(0.96);
+}
+
+/* Right side */
+.hero-right{
+    width: 50%;
+    text-align: center;
+}
+
+/* Hero image */
+.hero-right img{
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Tablet layout */
+@media (max-width:1024px){
+
+    nav{
+        padding: 15px 25px;
+    }
+
+    .hero{
+        padding: 40px;
+    }
+
+    .hero-left h1{
+        font-size: 42px;
+    }
+
+    .hero-left p{
+        font-size: 16px;
+    }
+
+    .hero-right img{
+        max-width: 400px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width:768px){
+
+    /* Hide desktop navbar */
+    nav ul{
+        display: none;
+    }
+
+    /* Show menu icon */
+    .menu{
+        display: block;
+    }
+
+    nav{
+        padding: 15px 20px;
+    }
+
+    /* Hero becomes vertical */
+    .hero{
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 40px 20px;
+    }
+
+    .hero-left,
+    .hero-right{
+        width: 100%;
+    }
+
+    .hero-left h1{
+        font-size: 34px;
+    }
+
+    .hero-left p{
+        font-size: 15px;
+    }
+
+    /* Mobile button */
+    .hero-left button{
+        width: 100%;
+    }
+
+    .hero-right img{
+        max-width: 100%;
+    }
+}
+
