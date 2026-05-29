@@ -5,80 +5,72 @@
     box-sizing: border-box;
 }
 
-/* Body styling */
 body{
-    background-color: white;
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    background-color: white;
 }
 
-/* Navigation bar */
+/* Navbar */
+
 nav{
     background-color: #00aaff;
-    padding: 15px 40px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    padding: 15px 40px;
+
     position: relative;
 }
 
-/* Logo styling */
+/* Logo */
+
 .logo h1{
     color: white;
     font-size: 28px;
+    text-transform: capitalize;
 }
 
-/* Navbar links */
-nav ul{
-    list-style: none;
+/* Desktop Nav */
 
+.desktop-nav{
     display: flex;
     gap: 30px;
+    list-style: none;
 }
 
-/* Navbar links */
-nav ul li a{
+.desktop-nav li a{
     text-decoration: none;
     color: white;
     font-size: 18px;
-
-    transition: 0.3s;
 }
 
-/* Hover effect */
-nav ul li a:hover{
+.desktop-nav li a:hover{
     color: lightgray;
 }
 
-/* User button */
+/* User */
+
 .user{
     background-color: white;
-
     padding: 8px 18px;
-
-    border-radius: 10px;
-
+    border-radius: 8px;
     cursor: pointer;
-
-    transition: 0.3s;
 }
 
-/* User text */
 .user h1{
     color: #00aaff;
     font-size: 18px;
 }
 
-/* Hover effect */
-.user:hover{
-    background-color: #dff4ff;
-}
+/* Menu Button */
 
-/* Menu icon */
-.menu{
+.menu-btn{
     display: none;
+
+    background: none;
+    border: none;
 
     color: white;
     font-size: 30px;
@@ -86,12 +78,13 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
-/* Sliding sidebar */
-.dropdown{
-    position: fixed;
+/* Dropdown Menu */
 
-    top: 0;
-    right: -100%;
+.dropdown{
+    position: absolute;
+
+    top: 70px;
+    left: -100%;
 
     width: 70%;
     height: 100vh;
@@ -102,121 +95,110 @@ nav ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    gap: 30px;
+
+    transition: 0.5s;
 }
 
-/* Sidebar links */
+/* Show menu using focus */
+
+.menu-btn:focus + .dropdown{
+    left: 0;
+}
+
+/* Dropdown Links */
+
 .dropdown li{
     list-style: none;
-    margin: 20px 0;
 }
 
-/* Sidebar text */
 .dropdown li a{
     text-decoration: none;
     color: white;
     font-size: 28px;
 }
 
-/* Hover effect */
 .dropdown li a:hover{
     color: #00aaff;
 }
 
-/* Open sidebar on hover */
-.menu:hover .dropdown{
-    right: 0;
-}
+/* Hero Section */
 
-/* Hero section */
 .hero{
     min-height: 90vh;
-
-    padding: 60px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    padding: 60px;
+
     gap: 40px;
 }
 
-/* Left side */
+/* Left Side */
+
 .hero-left{
     width: 50%;
 }
 
-/* Heading */
 .hero-left h1{
-    font-size: 52px;
-    line-height: 1.2;
-
+    font-size: 50px;
     margin-bottom: 20px;
-
+    line-height: 1.2;
     color: #222;
 }
-
 
 .hero-left span{
     color: #00aaff;
 }
 
-/* Paragraph */
 .hero-left p{
     font-size: 18px;
-    line-height: 1.7;
-
     color: gray;
-
-    margin-bottom: 30px;
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
-/* Button */
 .hero-left button{
     background-color: #00aaff;
     color: white;
 
     border: none;
 
-    padding: 15px 30px;
+    padding: 15px 25px;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     font-size: 16px;
 
     cursor: pointer;
-
-    transition: 0.3s;
 }
 
-/* Hover effect */
 .hero-left button:hover{
     background-color: #008ecc;
 }
 
-/* Focus state */
 .hero-left button:focus{
-    outline: 3px solid black;
+    outline: 2px solid black;
 }
 
-/* Click effect */
-.hero-left button:active{
-    transform: scale(0.96);
-}
+/* Right Side */
 
-/* Right side */
 .hero-right{
     width: 50%;
     text-align: center;
 }
 
-/* Hero image */
 .hero-right img{
     width: 100%;
     max-width: 500px;
 }
 
-/* Tablet layout */
-@media (max-width:1024px){
+/* Tablet */
+
+@media(max-width:1024px){
 
     nav{
         padding: 15px 25px;
@@ -227,39 +209,48 @@ nav ul li a:hover{
     }
 
     .hero-left h1{
-        font-size: 42px;
+        font-size: 40px;
     }
 
     .hero-left p{
         font-size: 16px;
     }
-
-    .hero-right img{
-        max-width: 400px;
-    }
 }
 
-/* Mobile layout */
-@media (max-width:768px){
+/* Mobile */
 
-    /* Hide desktop navbar */
-    nav ul{
+@media(max-width:768px){
+
+    /* Hide desktop nav */
+
+    .desktop-nav{
         display: none;
     }
 
-    /* Show menu icon */
-    .menu{
+    /* Show menu button */
+
+    .menu-btn{
         display: block;
+    }
+
+    /* Hide user */
+
+    .user{
+        display: none;
     }
 
     nav{
         padding: 15px 20px;
     }
 
-    /* Hero becomes vertical */
+    .logo h1{
+        font-size: 22px;
+    }
+
+    /* Hero section */
+
     .hero{
         flex-direction: column;
-
         text-align: center;
 
         padding: 40px 20px;
@@ -271,14 +262,13 @@ nav ul li a:hover{
     }
 
     .hero-left h1{
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .hero-left p{
         font-size: 15px;
     }
 
-    /* Mobile button */
     .hero-left button{
         width: 100%;
     }
@@ -287,4 +277,3 @@ nav ul li a:hover{
         max-width: 100%;
     }
 }
-
