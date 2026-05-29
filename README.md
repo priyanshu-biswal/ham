@@ -2,41 +2,42 @@
 
 ## Project Overview
 
-I created a service website that works well on different devices.
+I created a responsive laundry service website using HTML and CSS.
 
-The website is built using HTML and CSS.
+The website works properly on desktop, tablet, and mobile devices.
+The main goal of this project was to practice responsive web design concepts such as flexbox, media queries, transitions, transforms, and animations.
 
-The website has:
+The website includes:
 
-* A navigation bar that adjusts to screen sizes
+* A responsive navigation bar
 
-* A hero section with an image and text
+* A hero section with text and image
 
-* A sliding menu for devices
+* A CSS-only hamburger menu
 
-* Layouts that adapt to tablet and mobile screens
+* Hover effects and animations
 
-My main goal was to practice making websites responsive using media queries and flexbox.
+* Responsive layouts for different screen sizes
 
 ## Features
 
-Here are some features of the website:
+Some important features of the website are:
 
-* A navigation bar that changes on devices
+* Responsive navigation bar
 
-* A sliding menu for devices
+* CSS-only sliding hamburger menu
 
-* A layout that works well on devices
+* Hero section with image and text
 
-* A hero section with an image and text
+* Hover effects on buttons and links
 
-* transitions when you hover over elements
+* Image animation effects
 
-*. Spacing that adjust on different devices
+* Flexbox layout system
 
-* A layout system built with flexbox
+* Media queries for responsiveness
 
-* Media queries to make the website responsive
+* Smooth transitions and transforms
 
 ## Technologies Used
 
@@ -48,74 +49,151 @@ Here are some features of the website:
 
 * Media Queries
 
+* CSS Animations
+
+* CSS Transforms
+
+* CSS Transitions
+
 ## Hamburger Menu
 
-The website has a sliding menu for screens.
+The website includes a responsive hamburger menu for smaller screens.
 
 ### How it Works
 
-* On screens you see the normal navigation links.
+* On larger screens, normal navigation links are displayed.
 
-* On screens the links are hidden.
+* On smaller screens, the navigation links are hidden.
 
-* A menu icon appears instead.
+* A hamburger button appears instead.
 
-* When you hover over the icon a menu slides in from the right.
+* When the button gets focus, the menu slides into the screen using CSS.
 
-### Why I Added It
+### What I Learned
 
-I added the menu to:
+While creating the hamburger menu I learned:
 
-* Save space on screens
+* How to use the `:focus` pseudo-class
 
-* Make navigation easier on mobile devices
+* How sibling selectors work in CSS
 
-* Make the website more responsive and user-friendly
+* How to create CSS-only interactions
 
-I also learned how to:
+* How absolute positioning works
 
-* Use fixed positioning
+* How to build responsive navigation menus
 
-* Create sliding effects
+## Transitions
 
-* Hide and show elements on screens
+I used CSS transitions to make hover effects smoother and more attractive.
 
-## What I Learned
+### Examples
 
-While making this project I learned:
+* Button hover effects
 
-* How media queries help with screen sizes
+* Navigation link hover effects
 
-* How flexbox makes it easy to align items
+* Smooth scaling effects
 
-* How navigation bars work on devices
+### What I Learned
 
-* How sliding menus improve design
+* How transition duration works
 
-* How transitions create animations
+* How timing functions affect animation speed
 
-* How spacing and text size improve readability
+* How transitions improve user experience
+
+## Transforms
+
+I used CSS transforms to create interactive effects.
+
+### Examples
+
+* Button rotation on hover
+
+* Button scaling effects
+
+* Image movement effects
+
+### What I Learned
+
+* How `scale()` changes element size
+
+* How `rotate()` rotates elements
+
+* How transforms can combine multiple effects
+
+## Animations
+
+I added animations to the hero section image to make the design more dynamic.
+
+### Animation Effects
+
+* Orbit-style image movement
+
+* Squeezing effects using scaleX and scaleY
+
+* Smooth continuous motion
+
+### What I Learned
+
+* How keyframes work
+
+* How animation timing functions work
+
+* How to create custom animations
+
+* How animations improve visual design
 
 ## Responsive Design
 
 ### Tablet Layout
 
-On tablets:
+For tablets:
 
-* I made the text a bit smaller
+* Text size was reduced slightly
 
-* I adjusted the spacing
+* Spacing was adjusted
 
-* I resized the images
+* Images were resized
 
-This helps the content fit on sized screens.
+This helps the content fit properly on medium-sized screens.
 
 ### Mobile Layout
 
-On devices:
+For mobile devices:
 
-* The hero section changes from a row to a column
+* The hero section changes from row layout to column layout
 
+* Desktop navigation gets hidden
+
+* Hamburger menu becomes visible
+
+* Buttons become full width
+
+* Text becomes smaller for readability
+
+## What I Learned Overall
+
+Through this project I improved my understanding of:
+
+* Responsive web design
+
+* Flexbox layouts
+
+* Media queries
+
+* CSS transitions
+
+* CSS transforms
+
+* CSS animations
+
+* Navigation design
+
+* Mobile-first thinking
+
+* Creating interactive UI effects using only CSS
 * Navigation links are hidden
 
 * The menu icon appears
